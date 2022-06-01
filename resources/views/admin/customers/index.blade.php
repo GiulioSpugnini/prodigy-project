@@ -8,7 +8,7 @@
             </div>
         @endif
         <header class="d-flex justify-content-between align-items-center">
-            <h2>Customer</h2>
+            <h2>Customers</h2>
             <a href="{{ route('admin.customers.create') }}" class="btn btn-primary"> <i class="fa fa-plus mr-2"></i>
                 Add
                 Customer</a>
@@ -20,6 +20,9 @@
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Photo</th>
+                        <th scope="col">Annotations</th>
 
 
                     </tr>
@@ -30,6 +33,9 @@
                             <th scope="row">{{ $customer->id }}</th>
                             <td>{{ $customer->name }}</td>
                             <td>{{ $customer->email }}</td>
+                            <td>{{ $customer->phone_number }}</td>
+                            <td><img style="max-width:100px ; max-height:100px" src="{{ $customer->photos }}" alt=""></td>
+                            <td>{{ $customer->annotations }}</td>
 
                             <td>{{ $customer->created_at }}</td>
                             <td>{{ $customer->updated_at }}</td>

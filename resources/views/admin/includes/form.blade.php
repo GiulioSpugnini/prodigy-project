@@ -30,7 +30,7 @@
     </div>
     <div class="col-6">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" email="email"
+        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email"
             value="{{ old('email', $customer->email) }}">
         @error('email')
             <div class="invalid-feedback">
@@ -40,8 +40,8 @@
     </div>
     <div class="col-6">
         <label for="phone_number" class="form-label">Phone Number</label>
-        <input type="phone" class="form-control @error('phone_number') is-invalid @enderror" id="phone_number"
-            phone_number="phone_number" value="{{ old('phone_number', $customer->phone_number) }}">
+        <input type="tel" class="form-control @error('phone_number') is-invalid @enderror" id="phone_number"
+            name="phone_number" value="{{ old('phone_number', $customer->phone_number) }}">
         @error('phone_number')
             <div class="invalid-feedback">
                 {{ $message }}
@@ -51,16 +51,16 @@
 
     <div class="col-6">
         <div class="mb-3">
-            <label for="upload_image" class="form-label">Choose an image</label>
-            <input class="form-control" type="file" id="upload_image" name="image">
+            <label for="photos" class="form-label">Insert the url of the image</label>
+            <input class="form-control" type="url" id="photos" name="photos">
         </div>
     </div>
 
     <div class="col-12 text-center">
         <div class="mb-3">
-            <label for="content" class="form-label">Annotations</label>
-            <textarea class="form-control" id="content" rows="5"
-                name="content">{{ old('content', $customer->content) }}</textarea>
+            <label for="annotations" class="form-label">Annotations</label>
+            <textarea class="form-control" id="annotations" rows="5"
+                name="annotations">{{ old('annotations', $customer->annotations) }}</textarea>
         </div>
     </div>
 

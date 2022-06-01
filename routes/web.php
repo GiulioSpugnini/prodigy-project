@@ -24,5 +24,5 @@ Route::middleware('auth')
         Route::resource('customers', 'CustomerController');
     });
 Route::get('{any?}', function () {
-    return view('guest.home');
+    return view('admin.home');
 })->where("any", ".*");
