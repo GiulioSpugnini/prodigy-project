@@ -27,7 +27,8 @@ class OfferController extends Controller
      */
     public function create()
     {
-        //
+        $offer = new Offer();
+        return view('admin.offers.create', compact('offer'));
     }
 
     /**
@@ -38,51 +39,70 @@ class OfferController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'amount' => 'required|string',
+            'offer_duration' => 'required|string'
+        ]);
+        $data = $request->all();
+        $offer = new Offer();
+
+        $offer->fill($data);
+        $offer->save();
+
+        return redirect()->route('admin.offers.show', $offer->id);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Offer  $offer
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Offer $offer)
     {
-        //
+        return view('admin.offers.show', compact('offer', $offer->id));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Offer  $offer
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Offer $offer)
     {
-        //
+        return view('admin.offers.edit', compact('offer'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Offer  $offer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Offer $offer)
     {
-        //
+        $request->validate([
+            'amount' => 'required|string',
+            'offer_duration' => 'required|string'
+        ]);
+        $data = $request->all();
+
+        $offer->update($data);
+
+        return redirect()->route('admin.offers.show', $offer->id);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param \App\Models\Offer $offer
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Offer $offer)
     {
-        //
+        $offer->delete();
+        return redirect()->route('admin.offers.index');
     }
 }

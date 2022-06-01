@@ -26,7 +26,7 @@
             <div class="d-flex justify-content-end align-items-center my-2">
                 <a class="btn btn-secondary mr-2" href="{{ route('admin.customers.index') }}" type="button"
                     class="btn btn-success">
-                    Indietro
+                    Back
                 </a>
                 <a class="btn btn btn-warning mr-2" href="{{ route('admin.customers.edit', $customer->id) }}">Change</a>
                 <form action="{{ route('admin.customers.destroy', $customer->id) }}" method="POST" class="delete-form">
