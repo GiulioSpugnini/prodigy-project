@@ -38,17 +38,27 @@
             </div>
         @enderror
     </div>
+    <div class="col-6">
+        <label for="phone_number" class="form-label">Phone Number</label>
+        <input type="phone" class="form-control @error('phone_number') is-invalid @enderror" id="phone_number"
+            phone_number="phone_number" value="{{ old('phone_number', $customer->phone_number) }}">
+        @error('phone_number')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+        @enderror
+    </div>
 
     <div class="col-6">
         <div class="mb-3">
-            <label for="upload_image" class="form-label">Scegli un immagine</label>
+            <label for="upload_image" class="form-label">Choose an image</label>
             <input class="form-control" type="file" id="upload_image" name="image">
         </div>
     </div>
 
     <div class="col-12 text-center">
         <div class="mb-3">
-            <label for="content" class="form-label">Contenuto</label>
+            <label for="content" class="form-label">Annotations</label>
             <textarea class="form-control" id="content" rows="5"
                 name="content">{{ old('content', $customer->content) }}</textarea>
         </div>
@@ -59,10 +69,10 @@
 <div class="d-flex justify-content-end align-items-center">
     <a class="btn btn-secondary mr-2" href="{{ route('admin.customers.index') }}" type="button"
         class="btn btn-success">
-        Indietro
+        Back
     </a>
     <button type="submit" class="btn btn-success">
-        Conferma
+        Confirm
     </button>
 </div>
 
