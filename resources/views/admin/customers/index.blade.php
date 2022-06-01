@@ -23,6 +23,8 @@
                         <th scope="col">Phone Number</th>
                         <th scope="col">Photo</th>
                         <th scope="col">Annotations</th>
+                        <th scope="col">Created</th>
+                        <th scope="col">Last update</th>
 
 
                     </tr>
@@ -35,7 +37,7 @@
                             <td>{{ $customer->email }}</td>
                             <td>{{ $customer->phone_number }}</td>
                             <td><img style="max-width:100px ; max-height:100px" src="{{ $customer->photos }}" alt=""></td>
-                            <td>{{ $customer->annotations }}</td>
+                            <td style="max-width:100px" class="text-truncate">{{ $customer->annotations }}</td>
 
                             <td>{{ $customer->created_at }}</td>
                             <td>{{ $customer->updated_at }}</td>

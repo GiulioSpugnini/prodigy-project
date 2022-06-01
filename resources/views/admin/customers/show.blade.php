@@ -4,19 +4,23 @@
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
 
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card-body row">
+                        <div class="col-6">
+                            <div class="row">
+                                <h6 class="col-6">Name:<br>{{ $customer->name }}</h6>
+                                <h6 class="col-6">Phone Number: {{ $customer->phone_number }}</h6>
+                                <h6 class="col-6">Email: {{ $customer->email }}</h6>
+                                <h6 class="col-12 text-truncate">Annotations: {{ $customer->annotations }}</h6>
+                            </div>
+                        </div>
+                        <div class="col-6"><img class="img-fluid" src="{{ $customer->photos }}" alt="">
 
-                        <h6 class="col-6">Name:<br>{{ $customer->name }}</h6>
-                        <h6 class="col-6">Phone Number: {{ $customer->phone_number }}</h6>
-                        <h6 class="col-6">Email: {{ $customer->email }}</h6>
-                        <h6 class="col-12">Annotations: {{ $customer->annotations }}</h6>
 
 
-
+                        </div>
 
                     </div>
-                    <div class="col-6"><img class="img-fluid" src="{{ $customer->photos }}" alt=""></div>
                 </div>
             </div>
             <div class="d-flex justify-content-end align-items-center my-2">
