@@ -40,8 +40,8 @@ class OfferController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'amount' => 'required|string',
-            'offer_duration' => 'required|string'
+            'amount' => 'required',
+            'offer_duration' => 'required'
         ]);
         $data = $request->all();
         $offer = new Offer();
@@ -84,8 +84,8 @@ class OfferController extends Controller
     public function update(Request $request, Offer $offer)
     {
         $request->validate([
-            'amount' => 'required|string',
-            'offer_duration' => 'required|string'
+            'amount' => 'required',
+            'offer_duration' => 'required'
         ]);
         $data = $request->all();
 

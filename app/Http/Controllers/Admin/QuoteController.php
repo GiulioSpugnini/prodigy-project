@@ -27,7 +27,8 @@ class QuoteController extends Controller
      */
     public function create()
     {
-        //
+        $quote = new Quote();
+        return view('admin.quotes.create', compact('quote'));
     }
 
     /**
@@ -38,51 +39,70 @@ class QuoteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'amount' => 'required',
+            'discount' => 'required'
+        ]);
+        $data = $request->all();
+        $quote = new Quote();
+
+        $quote->fill($data);
+        $quote->save();
+
+        return redirect()->route('admin.quotes.show', $quote->id);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Quote  $quote
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Quote $quote)
     {
-        //
+        return view('admin.quotes.show', compact('quote', $quote->id));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Quote  $quote
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Quote  $quote)
     {
-        //
+        return view('admin.quotes.edit', compact('quote'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Quote  $quote
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Quote  $quote)
     {
-        //
+        $request->validate([
+            'amount' => 'required',
+            'discount' => 'required'
+        ]);
+        $data = $request->all();
+
+        $quote->update($data);
+
+        return redirect()->route('admin.quotes.show', $quote->id);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Quote  $quote
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Quote  $quote)
     {
-        //
+        $quote->delete();
+        return redirect()->route('admin.quotes.index');
     }
 }
