@@ -31,7 +31,7 @@
                     @forelse($offers as $offer)
                         <tr>
                             <th scope="row">{{ $offer->id }}</th>
-                            <td>{{ $offer->amount }}</td>
+                            <td>{{ $offer->amount }}€</td>
                             <td>{{ $offer->offer_duration }}</td>
                             <td>{{ $offer->created_at }}</td>
                             <td>{{ $offer->updated_at }}</td>

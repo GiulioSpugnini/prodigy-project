@@ -47,7 +47,7 @@
 </div>
 
 <div class="d-flex justify-content-end align-items-center my-2">
-    <a class="btn btn-secondary mr-2" href="{{ route('admin.offers.index') }}" type="button" class="btn btn-success">
+    <a class="btn btn-secondary mr-2" href="{{ route('admin.quotes.index') }}" type="button" class="btn btn-success">
         Back
     </a>
     <button type="submit" class="btn btn-success">

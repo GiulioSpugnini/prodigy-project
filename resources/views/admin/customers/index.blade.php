@@ -20,7 +20,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Phone Number</th>
+                        <th scope="col">Phone num.</th>
                         <th scope="col">Photo</th>
                         <th scope="col">Annotations</th>
                         <th scope="col">Created</th>

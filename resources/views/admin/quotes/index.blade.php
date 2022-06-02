@@ -30,8 +30,8 @@
                     @forelse($quotes as $quote)
                         <tr>
                             <th scope="row">{{ $quote->id }}</th>
-                            <td>{{ $quote->amount }}</td>
-                            <td>{{ $quote->discount }}</td>
+                            <td>{{ $quote->amount }}€</td>
+                            <td>{{ $quote->discount }}%</td>
                             <td>{{ $quote->created_at }}</td>
                             <td>{{ $quote->updated_at }}</td>
                             <th class="d-flex justify-content-end align-items-center">
