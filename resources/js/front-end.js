@@ -7,11 +7,12 @@
 require("./bootstrap");
 
 window.Vue = require("vue");
+window.axios = require("axios");
 
 import App from "./components/App.vue";
 import router from "./routes.js";
 
-const root = new Vue({
+const app = new Vue({
     el: "#root",
     router,
     render: (h) => h(App),

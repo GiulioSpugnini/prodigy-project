@@ -17,15 +17,19 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
 //  api/emails etc...
-Route::get('/emails', 'Api\EmailController@index');
-Route::get('/email/{id}', 'Api\EmailController@show');
 
-Route::get('/offers', 'Api\OfferController@index');
-Route::get('/offer/{id}', 'Api\OfferController@show');
+Route::namespace('Api')->group(function () {
+    Route::get('/emails', 'EmailController@index');
+    Route::get('/email/{id}', 'EmailController@show');
 
-Route::get('/quotes', 'Api\QuoteController@index');
-Route::get('/quote/{id}', 'Api\QuoteController@show');
+    Route::get('/offers', 'OfferController@index');
+    Route::get('/offer/{id}', 'OfferController@show');
 
-Route::get('/calls', 'Api\CallController@index');
-Route::get('/call/{id}', 'Api\CallController@show');
+    Route::get('/quotes', 'QuoteController@index');
+    Route::get('/quote/{id}', 'QuoteController@show');
+
+    Route::get('/calls', 'CallController@index');
+    Route::get('/call/{id}', 'CallController@show');
+});

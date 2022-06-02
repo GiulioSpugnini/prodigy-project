@@ -17,7 +17,7 @@
 
 <body>
 
-
+    {{-- VUE --}}
     <div id="root">
 
     </div>
