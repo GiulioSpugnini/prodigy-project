@@ -42,7 +42,10 @@ class CustomerController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'email' => 'required|string'
+            'email' => 'required|string',
+            'phone_number' => 'required',
+            'photos' => 'required',
+            'annotations' => 'required'
         ]);
         $data = $request->all();
         $customer = new Customer();
@@ -86,7 +89,10 @@ class CustomerController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'email' => 'required|string'
+            'email' => 'required|string',
+            'phone_number' => 'required',
+            'photos' => 'required',
+            'annotations' => 'required'
         ]);
         $data = $request->all();
 
