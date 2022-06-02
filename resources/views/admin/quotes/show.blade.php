@@ -6,27 +6,24 @@
 
                 <div class="col-md-12">
                     <div class="card-body row">
-                        <div class="col-6">
-                            <div class="row">
-                                <h6 class="col-6">Amount:<br>{{ $quote->amount }}</h6>
-                                <h6 class="col-6">Discount: {{ $quote->discount }}</h6>
-                            </div>
-
-                        </div>
+                        <h6 class="col-6">Amount:<br>{{ $quote->amount }}€</h6>
+                        <h6 class="col-6">Discount: <br>{{ $quote->discount }}€</h6>
                     </div>
                 </div>
-                <div class="d-flex justify-content-end align-items-center my-2">
-                    <a class="btn btn-secondary mr-2" href="{{ route('admin.quotes.index') }}" type="button"
-                        class="btn btn-success">
-                        Back
-                    </a>
-                    <a class="btn btn btn-warning mr-2" href="{{ route('admin.quotes.edit', $quote->id) }}">Change</a>
-                    <form action="{{ route('admin.quotes.destroy', $quote->id) }}" method="POST" class="delete-form">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-danger mr-2" type="submit">Delete</button>
-
-                    </form>
+                <div class="col-12">
+                    <div class="d-flex justify-content-end align-items-center m-2">
+                        <a class="btn btn-secondary mr-2" href="{{ route('admin.quotes.index') }}" type="button"
+                            class="btn btn-success">
+                            Back
+                        </a>
+                        <a class="btn btn btn-warning mr-2" href="{{ route('admin.quotes.edit', $quote->id) }}">Change</a>
+                        <form action="{{ route('admin.quotes.destroy', $quote->id) }}" method="POST"
+                            class="delete-form">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger mr-2" type="submit">Delete</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

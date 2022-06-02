@@ -19,7 +19,7 @@ class CreateCustomersTable extends Migration
             $table->string('email')->unique();
             $table->string('phone_number')->unique();
             $table->string('photos');
-            $table->string('annotations');
+            $table->longText('annotations');
             $table->timestamps();
         });
     }

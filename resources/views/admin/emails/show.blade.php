@@ -4,20 +4,25 @@
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
 
-                <div class="col-md-12">
+                <div class="col-12">
                     <div class="card-body row">
-                        <h6 class="col-6"><strong>Amount:</strong><br>{{ $offer->amount }}€</h6>
-                        <h6 class="col-6"><strong>Offer duration:</strong> <br>{{ $offer->offer_duration }}</h6>
+
+                        <h6 class="col-6"><strong>Title:</strong><br>{{ $email->title }}</h6>
+                        <h6 class="col-6"><strong>Date Time:</strong> <br>{{ $email->updated_at }}</h6>
+
+                        <div class="col-12 flex-grow-1">
+                            <h6><strong>Text:</strong> <br>{{ $email->text }}</h6>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="d-flex justify-content-end align-items-center my-2">
-                        <a class="btn btn-secondary mr-2" href="{{ route('admin.offers.index') }}" type="button"
+                        <a class="btn btn-secondary mr-2" href="{{ route('admin.emails.index') }}" type="button"
                             class="btn btn-success">
                             Back
                         </a>
-                        <a class="btn btn btn-warning mr-2" href="{{ route('admin.offers.edit', $offer->id) }}">Change</a>
-                        <form action="{{ route('admin.offers.destroy', $offer->id) }}" method="POST"
+                        <a class="btn btn btn-warning mr-2" href="{{ route('admin.emails.edit', $email->id) }}">Change</a>
+                        <form action="{{ route('admin.emails.destroy', $email->id) }}" method="POST"
                             class="delete-form">
                             @csrf
                             @method('DELETE')

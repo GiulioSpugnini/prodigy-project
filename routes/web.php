@@ -24,6 +24,7 @@ Route::middleware('auth')
         Route::resource('customers', 'CustomerController');
         Route::resource('offers', 'OfferController');
         Route::resource('quotes', 'QuoteController');
+        Route::resource('emails', 'EmailController');
     });
 Route::get('{any?}', function () {
     return view('admin.home');

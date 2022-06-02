@@ -19,7 +19,7 @@
 @csrf
 <div class="row gy-2">
     <div class="col-6">
-        <label for="amount" class="form-label">Amount</label>
+        <label for="amount" class="form-label"><strong>Amount</strong></label>
         <input type="number" class="form-control @error('amount') is-invalid @enderror" id="amount" name="amount"
             value="{{ old('amount', $offer->amount) }}">
         @error('amount')
@@ -29,7 +29,7 @@
         @enderror
     </div>
     <div class="col-6">
-        <label for="offer_duration" class="form-label">offer_duration</label>
+        <label for="offer_duration" class="form-label"><strong>Offer duration</strong></label>
         <input type="datetime-local" class="form-control @error('offer_duration') is-invalid @enderror"
             id="offer_duration" name="offer_duration" value="{{ old('offer_duration', $offer->offer_duration) }}">
         @error('offer_duration')
@@ -47,10 +47,11 @@
 </div>
 
 <div class="d-flex justify-content-end align-items-center">
-    <a class="btn btn-secondary mr-2" href="{{ route('admin.offers.index') }}" type="button" class="btn btn-success">
+    <a class="btn btn-secondary mr-2 my-2" href="{{ route('admin.offers.index') }}" type="button"
+        class="btn btn-success">
         Back
     </a>
-    <button type="submit" class="btn btn-success">
+    <button type="submit" class="btn btn-success my-2">
         Confirm
     </button>
 </div>

@@ -8,18 +8,18 @@
                     <div class="card-body row">
                         <div class="col-6">
                             <div class="row">
-                                <h6 class="col-6">Name:<br>{{ $customer->name }}</h6>
-                                <h6 class="col-6">Phone Number: {{ $customer->phone_number }}</h6>
-                                <h6 class="col-6">Email: {{ $customer->email }}</h6>
-                                <h6 class="col-12 text-truncate">Annotations: {{ $customer->annotations }}</h6>
+                                <h6 class="col-12"><strong>Name:</strong><br>{{ $customer->name }}</h6>
+                                <h6 class="col-12"><strong>Phone Number:</strong><br> {{ $customer->phone_number }}
+                                </h6>
+                                <h6 class="col-12"><strong>Email:</strong> <br>{{ $customer->email }}</h6>
                             </div>
                         </div>
-                        <div class="col-6"><img class="img-fluid" src="{{ $customer->photos }}" alt="">
-
-
-
+                        <div class="col-6">
+                            <img class="img-fluid" src="{{ $customer->photos }}" alt="">
                         </div>
-
+                    </div>
+                    <div class="col-12 flex-grow-1">
+                        <h6><strong>Annotations:</strong> <br>{{ $customer->annotations }}</h6>
                     </div>
                 </div>
             </div>

@@ -42,7 +42,6 @@ class EmailController extends Controller
         $request->validate([
             'title' => 'required',
             'text' => 'required',
-            'date_time' => 'required',
         ]);
         $data = $request->all();
         $email = new Email();
@@ -87,7 +86,6 @@ class EmailController extends Controller
         $request->validate([
             'title' => 'required',
             'text' => 'required',
-            'date_time' => 'required',
         ]);
         $data = $request->all();
 
