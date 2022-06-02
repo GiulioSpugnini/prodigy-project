@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Quote extends Model
 {
     protected $fillable = [
-        'amount', 'discount',
+        'amount', 'customer_id', 'discount',
     ];
     public function customers()
     {
-        return $this->belongsToMany('App\Models\Customer');
+        return $this->belongsTo('App\Models\Customer');
     }
 }

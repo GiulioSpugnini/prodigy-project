@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Offer extends Model
 {
     protected $fillable = [
-        'amount', 'offer_duration',
+        'amount', 'customer_id', 'offer_duration',
     ];
     public function customers()
     {
-        return $this->belongsToMany('App\Models\Customer');
+        return $this->belongsTo('App\Models\Customer');
     }
 }

@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Email extends Model
 {
     protected $fillable = [
-        'title', 'text'
+        'title', 'customer_id', 'name', 'text'
     ];
     public function customers()
     {
-        return $this->belongsToMany('App\Models\Customer');
+        return $this->belongsTo('App\Models\Customer');
     }
 }

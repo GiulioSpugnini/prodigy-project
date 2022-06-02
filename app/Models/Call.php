@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Call extends Model
 {
     protected $fillable = [
-        'customer_id', 'phone_number', 'date_time', 'call_duration'
+        'customer_id', 'phone_number', 'date_time', 'call_duration', 'customer_id'
     ];
     public function customer()
     {
