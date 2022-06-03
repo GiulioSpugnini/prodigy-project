@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::namespace('Api')->group(function () {
     Route::get('/emails', 'EmailController@index');
+    Route::post('/emails', 'EmailController@index');
     Route::get('/email/{id}', 'EmailController@show');
 
     Route::get('/offers', 'OfferController@index');

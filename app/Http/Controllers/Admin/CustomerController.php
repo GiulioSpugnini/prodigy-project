@@ -42,6 +42,7 @@ class CustomerController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
+            'user_id' => 'required',
             'email' => 'required|string',
             'phone_number' => 'required',
             'photos' => 'required',

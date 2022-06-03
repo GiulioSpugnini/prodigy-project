@@ -4,12 +4,16 @@
     <Loader v-if="isLoading" />
     <div v-else>
       <div v-if="offers.length">
-        <div class="card" v-for="offer in offers" :key="offer.id">
-          <h5 class="card-header">
+        <div
+          class="card bg-dark text-light border-white my-2"
+          v-for="offer in offers"
+          :key="offer.id"
+        >
+          <h5 class="card-header bg-dark text-light border-white">
             <strong>Amount:</strong> {{ offer.amount }}
           </h5>
-          <div class="card-body">
-            <h5 class="card-title">
+          <div class="card-body bg-dark text-light border-white">
+            <h5 class="card-title bg-dark text-light border-white">
               <strong>Offer duration:</strong> {{ offer.offer_duration }}
             </h5>
           </div>

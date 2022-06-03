@@ -1,10 +1,20 @@
 <template>
-  <div>
+  <div class="p-2 text-black" style="background-color: #12577a">
     <main class="container">
-      <Emails />
-      <Offers />
-      <Calls />
-      <Quotes />
+      <div class="row">
+        <div class="col-6 py-1">
+          <Emails />
+        </div>
+        <div class="col-6 py-1">
+          <Offers />
+        </div>
+        <div class="col-6 py-1">
+          <Calls />
+        </div>
+        <div class="col-6 py-1">
+          <Quotes />
+        </div>
+      </div>
     </main>
   </div>
 </template>

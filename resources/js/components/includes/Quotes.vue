@@ -4,21 +4,25 @@
     <Loader v-if="isLoading" />
     <div v-else>
       <div v-if="quotes.length">
-        <div class="card" v-for="quote in quotes" :key="quote.id">
-          <h5 class="card-header">
+        <div
+          class="card bg-dark text-light border-white my-2"
+          v-for="quote in quotes"
+          :key="quote.id"
+        >
+          <h5 class="card-header bg-dark text-light border-white">
             <strong>Amount:</strong> {{ quote.amount }}
           </h5>
-          <div class="card-body">
-            <h5 class="card-title">
+          <div class="card-body bg-dark text-light border-white">
+            <h5 class="card-title bg-dark text-light border-white">
               <strong>Discount:</strong> {{ quote.discount }}
             </h5>
-            <p class="card-text">
+            <p class="card-text bg-dark text-light border-white">
               {{ quote.text }}
             </p>
           </div>
         </div>
       </div>
-      <h4 v-else>Didn't find any emails</h4>
+      <h4 v-else>Didn't find any quotes</h4>
     </div>
   </section>
 </template>

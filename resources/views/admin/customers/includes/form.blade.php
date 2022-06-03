@@ -17,6 +17,7 @@
             method="POST" novalidate>
 @endif
 @csrf
+<input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
 <div class="row gy-2">
     <div class="col-6">
         <label for="name" class="form-label"><strong>Name</strong></label>

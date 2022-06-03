@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Customer;
 use App\Models\Email;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EmailController extends Controller
 {
@@ -15,7 +18,6 @@ class EmailController extends Controller
      */
     public function index()
     {
-        // $emails = Email::orderBy('updated_at', 'DESC')->with('customers')->paginate(5);
         $emails = Email::all();
         return response()->json($emails);
     }

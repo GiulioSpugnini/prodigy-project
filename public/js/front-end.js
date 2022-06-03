@@ -1923,6 +1923,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -1977,6 +1987,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Loader_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Loader.vue */ "./resources/js/components/Loader.vue");
+//
+//
+//
+//
 //
 //
 //
@@ -2068,6 +2082,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Emails",
@@ -2133,6 +2153,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Offers",
@@ -2176,6 +2200,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Loader_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Loader.vue */ "./resources/js/components/Loader.vue");
+//
+//
+//
+//
 //
 //
 //
@@ -38465,22 +38493,26 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "main",
-      { staticClass: "container" },
-      [
-        _c("Emails"),
-        _vm._v(" "),
-        _c("Offers"),
-        _vm._v(" "),
-        _c("Calls"),
-        _vm._v(" "),
-        _c("Quotes"),
-      ],
-      1
-    ),
-  ])
+  return _c(
+    "div",
+    {
+      staticClass: "p-2 text-black",
+      staticStyle: { "background-color": "#12577a" },
+    },
+    [
+      _c("main", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-6 py-1" }, [_c("Emails")], 1),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6 py-1" }, [_c("Offers")], 1),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6 py-1" }, [_c("Calls")], 1),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6 py-1" }, [_c("Quotes")], 1),
+        ]),
+      ]),
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38556,29 +38588,62 @@ var render = function () {
               ? _c(
                   "div",
                   _vm._l(_vm.calls, function (call) {
-                    return _c("div", { key: call.id, staticClass: "card" }, [
-                      _c("h5", { staticClass: "card-header" }, [
-                        _c("strong", [_vm._v("Phone number:")]),
-                        _vm._v(" " + _vm._s(call.phone_number) + "\n        "),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "card-body" }, [
-                        _c("h5", { staticClass: "card-title" }, [
-                          _c("strong", [_vm._v("Call_duration:")]),
-                          _vm._v(
-                            " " + _vm._s(call.call_duration) + "\n          "
-                          ),
-                        ]),
+                    return _c(
+                      "div",
+                      {
+                        key: call.id,
+                        staticClass:
+                          "card bg-dark text-light border-white my-2",
+                      },
+                      [
+                        _c(
+                          "h5",
+                          {
+                            staticClass:
+                              "card-header bg-dark text-light border-white",
+                          },
+                          [
+                            _c("strong", [_vm._v("Phone number:")]),
+                            _vm._v(
+                              " " + _vm._s(call.phone_number) + "\n        "
+                            ),
+                          ]
+                        ),
                         _vm._v(" "),
-                        _c("h5", [
-                          _vm._v(
-                            "\n            " +
-                              _vm._s(call.date_time) +
-                              "\n          "
-                          ),
-                        ]),
-                      ]),
-                    ])
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "card-body bg-dark text-light border-white",
+                          },
+                          [
+                            _c(
+                              "h5",
+                              {
+                                staticClass:
+                                  "card-title bg-dark text-light border-white",
+                              },
+                              [
+                                _c("strong", [_vm._v("Call_duration:")]),
+                                _vm._v(
+                                  " " +
+                                    _vm._s(call.call_duration) +
+                                    "\n          "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("h5", [
+                              _vm._v(
+                                "\n            " +
+                                  _vm._s(call.date_time) +
+                                  "\n          "
+                              ),
+                            ]),
+                          ]
+                        ),
+                      ]
+                    )
                   }),
                   0
                 )
@@ -38622,27 +38687,62 @@ var render = function () {
               ? _c(
                   "div",
                   _vm._l(_vm.emails, function (email) {
-                    return _c("div", { key: email.id, staticClass: "card" }, [
-                      _c("h5", { staticClass: "card-header" }, [
-                        _c("strong", [_vm._v("Name:")]),
-                        _vm._v(" " + _vm._s(email.name)),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "card-body" }, [
-                        _c("h5", { staticClass: "card-title" }, [
-                          _c("strong", [_vm._v("Title:")]),
-                          _vm._v(" " + _vm._s(email.title) + "\n          "),
-                        ]),
+                    return _c(
+                      "div",
+                      {
+                        key: email.id,
+                        staticClass:
+                          "card bg-dark text-light border-white my-2",
+                      },
+                      [
+                        _c(
+                          "h5",
+                          {
+                            staticClass:
+                              "card-header bg-dark text-light border-white",
+                          },
+                          [
+                            _c("strong", [_vm._v("Name:")]),
+                            _vm._v(" " + _vm._s(email.name) + "\n        "),
+                          ]
+                        ),
                         _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _vm._v(
-                            "\n            " +
-                              _vm._s(email.text) +
-                              "\n          "
-                          ),
-                        ]),
-                      ]),
-                    ])
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "card-body bg-dark text-light border-white",
+                          },
+                          [
+                            _c(
+                              "h5",
+                              { staticClass: "card-title bg-dark text-light" },
+                              [
+                                _c("strong", [_vm._v("Title:")]),
+                                _vm._v(
+                                  " " + _vm._s(email.title) + "\n          "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "p",
+                              {
+                                staticClass:
+                                  "card-text bg-dark text-light border-white",
+                              },
+                              [
+                                _vm._v(
+                                  "\n            " +
+                                    _vm._s(email.text) +
+                                    "\n          "
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]
+                    )
                   }),
                   0
                 )
@@ -38686,21 +38786,52 @@ var render = function () {
               ? _c(
                   "div",
                   _vm._l(_vm.offers, function (offer) {
-                    return _c("div", { key: offer.id, staticClass: "card" }, [
-                      _c("h5", { staticClass: "card-header" }, [
-                        _c("strong", [_vm._v("Amount:")]),
-                        _vm._v(" " + _vm._s(offer.amount) + "\n        "),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "card-body" }, [
-                        _c("h5", { staticClass: "card-title" }, [
-                          _c("strong", [_vm._v("Offer duration:")]),
-                          _vm._v(
-                            " " + _vm._s(offer.offer_duration) + "\n          "
-                          ),
-                        ]),
-                      ]),
-                    ])
+                    return _c(
+                      "div",
+                      {
+                        key: offer.id,
+                        staticClass:
+                          "card bg-dark text-light border-white my-2",
+                      },
+                      [
+                        _c(
+                          "h5",
+                          {
+                            staticClass:
+                              "card-header bg-dark text-light border-white",
+                          },
+                          [
+                            _c("strong", [_vm._v("Amount:")]),
+                            _vm._v(" " + _vm._s(offer.amount) + "\n        "),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "card-body bg-dark text-light border-white",
+                          },
+                          [
+                            _c(
+                              "h5",
+                              {
+                                staticClass:
+                                  "card-title bg-dark text-light border-white",
+                              },
+                              [
+                                _c("strong", [_vm._v("Offer duration:")]),
+                                _vm._v(
+                                  " " +
+                                    _vm._s(offer.offer_duration) +
+                                    "\n          "
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]
+                    )
                   }),
                   0
                 )
@@ -38744,31 +38875,69 @@ var render = function () {
               ? _c(
                   "div",
                   _vm._l(_vm.quotes, function (quote) {
-                    return _c("div", { key: quote.id, staticClass: "card" }, [
-                      _c("h5", { staticClass: "card-header" }, [
-                        _c("strong", [_vm._v("Amount:")]),
-                        _vm._v(" " + _vm._s(quote.amount) + "\n        "),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "card-body" }, [
-                        _c("h5", { staticClass: "card-title" }, [
-                          _c("strong", [_vm._v("Discount:")]),
-                          _vm._v(" " + _vm._s(quote.discount) + "\n          "),
-                        ]),
+                    return _c(
+                      "div",
+                      {
+                        key: quote.id,
+                        staticClass:
+                          "card bg-dark text-light border-white my-2",
+                      },
+                      [
+                        _c(
+                          "h5",
+                          {
+                            staticClass:
+                              "card-header bg-dark text-light border-white",
+                          },
+                          [
+                            _c("strong", [_vm._v("Amount:")]),
+                            _vm._v(" " + _vm._s(quote.amount) + "\n        "),
+                          ]
+                        ),
                         _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _vm._v(
-                            "\n            " +
-                              _vm._s(quote.text) +
-                              "\n          "
-                          ),
-                        ]),
-                      ]),
-                    ])
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "card-body bg-dark text-light border-white",
+                          },
+                          [
+                            _c(
+                              "h5",
+                              {
+                                staticClass:
+                                  "card-title bg-dark text-light border-white",
+                              },
+                              [
+                                _c("strong", [_vm._v("Discount:")]),
+                                _vm._v(
+                                  " " + _vm._s(quote.discount) + "\n          "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "p",
+                              {
+                                staticClass:
+                                  "card-text bg-dark text-light border-white",
+                              },
+                              [
+                                _vm._v(
+                                  "\n            " +
+                                    _vm._s(quote.text) +
+                                    "\n          "
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]
+                    )
                   }),
                   0
                 )
-              : _c("h4", [_vm._v("Didn't find any emails")]),
+              : _c("h4", [_vm._v("Didn't find any quotes")]),
           ]),
     ],
     1

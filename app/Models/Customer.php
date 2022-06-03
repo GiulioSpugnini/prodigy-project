@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Customer extends Model
 {
     protected $fillable = [
-        'name', 'email', 'phone_number', 'photos', 'annotations'
+        'name', 'user_id', 'email', 'phone_number', 'photos', 'annotations'
     ];
     public function emails()
     {
@@ -26,5 +26,9 @@ class Customer extends Model
     public function quotes()
     {
         return $this->hasMany('App\Models\Quote');
+    }
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
     }
 }

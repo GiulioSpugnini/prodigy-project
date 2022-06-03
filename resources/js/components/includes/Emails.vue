@@ -4,13 +4,19 @@
     <Loader v-if="isLoading" />
     <div v-else>
       <div v-if="emails.length">
-        <div class="card" v-for="email in emails" :key="email.id">
-          <h5 class="card-header"><strong>Name:</strong> {{ email.name }}</h5>
-          <div class="card-body">
-            <h5 class="card-title">
+        <div
+          class="card bg-dark text-light border-white my-2"
+          v-for="email in emails"
+          :key="email.id"
+        >
+          <h5 class="card-header bg-dark text-light border-white">
+            <strong>Name:</strong> {{ email.name }}
+          </h5>
+          <div class="card-body bg-dark text-light border-white">
+            <h5 class="card-title bg-dark text-light">
               <strong>Title:</strong> {{ email.title }}
             </h5>
-            <p class="card-text">
+            <p class="card-text bg-dark text-light border-white">
               {{ email.text }}
             </p>
           </div>
