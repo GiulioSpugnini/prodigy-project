@@ -17,7 +17,7 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Recipient</th>
+                        <th scope="col">Customer id</th>
                         <th scope="col">Title</th>
                         <th scope="col">Text</th>
                         <th scope="col">Date Time</th>
@@ -29,7 +29,7 @@
                     @forelse($emails as $email)
                         <tr>
                             <th scope="row">{{ $email->id }}</th>
-                            <td>{{ $email->recipient }}</td>
+                            <td>{{ $email->customer_id }}</td>
                             <td>{{ $email->title }}</td>
                             <td>{{ $email->text }}</td>
                             <td>{{ $email->updated_at }}</td>

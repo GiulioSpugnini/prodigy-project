@@ -19,10 +19,10 @@
 @csrf
 <div class="row gy-2">
     <div class="col-6 py-2 text-left">
-        <label for="recipient" class="form-label"><strong>Recipient</strong></label>
-        <input type="text" class="form-control @error('recipient') is-invalid @enderror" id="recipient" name="recipient"
-            value="{{ old('recipient', $email->recipient) }}">
-        @error('recipient')
+        <label for="customer_id" class="form-label"><strong>Customer id</strong></label>
+        <input type="text" class="form-control @error('customer_id') is-invalid @enderror" id="customer_id"
+            name="customer_id" value="{{ old('customer_id', $email->customer_id) }}">
+        @error('customer_id')
             <div class="invalid-feedback">
                 {{ $message }}
             </div>

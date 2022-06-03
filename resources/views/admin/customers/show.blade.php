@@ -45,7 +45,7 @@
         const deleteForms = document.querySelector('.delete-form');
         deleteForms.addEventListener('submit', (e) => {
             e.preventDefault();
-            const accept = confirm('Sei sicuro di voler cancellare questo post?');
+            const accept = confirm('Are you sure you want to delete it?');
             if (accept) e.target.submit();
         });
     </script>

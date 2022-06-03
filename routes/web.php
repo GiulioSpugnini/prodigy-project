@@ -26,6 +26,7 @@ Route::middleware('auth')
         Route::resource('quotes', 'QuoteController');
         Route::resource('emails', 'EmailController');
     });
+Route::get('/guest.home', 'Guest\HomeController@index')->name('guest.home');
 Route::get('{any?}', function () {
     return view('guest.home');
 })->where("any", ".*");
