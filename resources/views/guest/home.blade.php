@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 
-<body>
+<body style="background-color: #12577a" class="text-center">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ route('guest.home') }}">
@@ -54,9 +54,8 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                                                                document.getElementById('logout-form').submit();">
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                            document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -77,10 +76,6 @@
 
         </div>
     @endauth
-
-
-
-
 
     <script src="{{ asset('js/front-end.js') }}"></script>
 </body>
