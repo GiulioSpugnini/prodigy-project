@@ -7,7 +7,7 @@
             </div>
         @endif
         <header class="d-flex justify-content-between align-items-center">
-            <h2>Emails</h2>
+            <h2 class="text-light">Emails</h2>
             <a href="{{ route('admin.emails.create') }}" class="btn btn-primary"> <i class="fa fa-plus mr-2"></i>
                 Write new
                 email</a>

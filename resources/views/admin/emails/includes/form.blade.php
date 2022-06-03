@@ -19,7 +19,7 @@
 @csrf
 <div class="row gy-2">
     <div class="col-6 py-2 text-left">
-        <label for="customer_id" class="form-label"><strong>Customer id</strong></label>
+        <label for="customer_id" class="form-label"><strong class="text-light">Customer id</strong></label>
         <input type="numeric" class="form-control @error('customer_id') is-invalid @enderror" id="customer_id"
             name="customer_id" value="{{ old('customer_id', $email->customer_id) }}">
         @error('customer_id')
@@ -29,7 +29,7 @@
         @enderror
     </div>
     <div class="col-6 py-2 text-left">
-        <label for="name" class="form-label"><strong>Name</strong></label>
+        <label for="name" class="form-label"><strong class="text-light">Name</strong></label>
         <input type="numeric" class="form-control @error('name') is-invalid @enderror" id="name" name="name"
             value="{{ old('name', $email->name) }}">
         @error('name')
@@ -39,7 +39,7 @@
         @enderror
     </div>
     <div class="col-6 py-2 text-left">
-        <label for="title" class="form-label"><strong>Title</strong></label>
+        <label for="title" class="form-label"><strong class="text-light">Title</strong></label>
         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title"
             value="{{ old('title', $email->title) }}">
         @error('title')
@@ -50,7 +50,7 @@
     </div>
     <div class="col-12 py-2">
         <div class="mb-3">
-            <label for="text" class="form-label"><strong>Text</strong></label>
+            <label for="text" class="form-label"><strong class="text-light">Text</strong></label>
             <textarea class="form-control" id="text" rows="5" name="text">{{ old('text', $email->text) }}</textarea>
         </div>
     </div>

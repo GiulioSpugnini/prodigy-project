@@ -19,7 +19,9 @@
 @csrf
 <div class="row gy-2">
     <div class="col-6">
-        <label for="amount" class="form-label">Amount</label>
+        <label for="amount" class="form-label">
+            <h6 class="text-light">Amount</h6>
+        </label>
         <input type="number" class="form-control @error('amount') is-invalid @enderror" id="amount" name="amount"
             value="{{ old('amount', $quote->amount) }}">
         @error('amount')
@@ -29,7 +31,9 @@
         @enderror
     </div>
     <div class="col-6">
-        <label for="discount" class="form-label">Discount</label>
+        <label for="discount" class="form-label">
+            <h6 class="text-light">Discount</h6>
+        </label>
         <input type="number" class="form-control @error('discount') is-invalid @enderror" id="discount" name="discount"
             value="{{ old('discount', $quote->discount) }}">
         @error('discount')

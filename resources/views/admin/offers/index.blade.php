@@ -8,7 +8,7 @@
             </div>
         @endif
         <header class="d-flex justify-content-between align-items-center">
-            <h2>offers</h2>
+            <h2 class="text-light">Offers</h2>
             <a href="{{ route('admin.offers.create') }}" class="btn btn-primary"> <i class="fa fa-plus mr-2"></i>
                 Add
                 offer</a>

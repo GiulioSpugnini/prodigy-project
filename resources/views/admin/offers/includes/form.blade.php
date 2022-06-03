@@ -19,7 +19,7 @@
 @csrf
 <div class="row gy-2">
     <div class="col-6">
-        <label for="amount" class="form-label"><strong>Amount</strong></label>
+        <label for="amount" class="form-label"><strong class="text-light">Amount</strong></label>
         <input type="number" class="form-control @error('amount') is-invalid @enderror" id="amount" name="amount"
             value="{{ old('amount', $offer->amount) }}">
         @error('amount')
@@ -29,7 +29,8 @@
         @enderror
     </div>
     <div class="col-6">
-        <label for="offer_duration" class="form-label"><strong>Offer duration</strong></label>
+        <label for="offer_duration" class="form-label"><strong class="text-light">Offer
+                duration</strong></label>
         <input type="datetime-local" class="form-control @error('offer_duration') is-invalid @enderror"
             id="offer_duration" name="offer_duration" value="{{ old('offer_duration', $offer->offer_duration) }}">
         @error('offer_duration')

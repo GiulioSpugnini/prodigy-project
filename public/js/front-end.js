@@ -38496,7 +38496,7 @@ var render = function () {
   return _c(
     "div",
     {
-      staticClass: "p-2 text-black",
+      staticClass: "p-2 text-white",
       staticStyle: { "background-color": "#12577a" },
     },
     [

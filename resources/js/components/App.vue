@@ -1,5 +1,5 @@
 <template>
-  <div class="p-2 text-black" style="background-color: #12577a">
+  <div class="p-2 text-white" style="background-color: #12577a">
     <main class="container">
       <div class="row">
         <div class="col-6 py-1">
