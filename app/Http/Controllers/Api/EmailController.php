@@ -15,8 +15,8 @@ class EmailController extends Controller
      */
     public function index()
     {
-        $emails = Email::orderBy('updated_at', 'DESC')->with('customers')->paginate(5);
-
+        // $emails = Email::orderBy('updated_at', 'DESC')->with('customers')->paginate(5);
+        $emails = Email::all();
         return response()->json($emails);
     }
 
